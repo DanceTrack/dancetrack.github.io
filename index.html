@@ -144,11 +144,38 @@
             Dataset
         </h2>
         <img class="figure" src="media/dancetrack.jpg" alt="Dataset Overview">
-        
-<!--         <h2 id="results">
+        <p>
+        Scene samples from DanceTrack. (a) outdoor scene, (b) low-lighting scene, (c) large group of dancing people; (d) gymnastics scene where the motion is usually even more diverse and people have more aggressive deformation.
+        </p>
+         <h2 id="results">
             Results
         </h2>
-        <h3 class="results" id="sample">
+        
+        <h3 class="results" id="oracle">
+            Oracle Analysis
+        </h3>
+        <img class="figure" src="media/oracle.jpg" alt="Oracle Analysis">
+        <p>
+        Oracle analysis of different association models on MOT17 and DanceTrack validation set, where the detection boxes are ground-truth boxes. The result shows the evident increased difficulty of performing multi-object tracking on DanceTrack than MOT17 dataset.
+        </p>
+        
+        <h3 class="results" id="benchmark">
+            Benchmark Result
+        </h3>
+        <img class="figure" src="media/benchmark.jpg" alt="Benchmark Result">
+        <p>
+        Benchmark results of investigated algorithms on MOT17 and DanceTrack test set. DanceTrack makes detection easier (higher MOTA and DetA scoers) but still brings significant tracking performance drop compared to MOT17 (lower HOTA, AssA and IDF1 scores). This result reveals the bottleneck of multi-object tracking on DanceTrack is on the association part.
+        </p>
+
+        <h3 class="results" id="benchmark">
+            Association Strategy
+        </h3>
+        <img class="figure" src="media/motion.jpg" alt="Benchmark Result">
+        <p>
+        Comparisons of different association strategies on DanceTrack validation set. The detection results are output by the same YOLOX detector. Both Kalman filter and LSTM outperform naive IoU association by a large margin, indicating the great potential of motion models in tracking objects, especially when appearance cues are not reliable. We expect to see more researches in this field.
+        </p>
+        
+<!--         <h3 class="results" id="sample">
             Generative Motion Infilling with Multiple Samples
         </h3>
         <video class="centered shadow" width="100%" autoplay muted loop playsinline>
